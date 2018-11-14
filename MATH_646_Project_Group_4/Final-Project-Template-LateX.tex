@@ -1,0 +1,113 @@
+% LaTeX Template for a short article
+%
+% To use:
+%
+% Copy into a new file, replace all
+% [BRACKETED UPPER CASE TEXT]
+% with your own, then run the latex command on it.
+% Use dvips to print the .dvi output
+\documentclass[12pt]{article}
+%These are packages that allow you to access LaTeX, like math symbols, fonts, colors, picture environments, etc.  There are many other packages available to do a variety of things.
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{helvet}
+\usepackage{physics}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{hyperref}
+\textheight9in \oddsidemargin-.5in \textwidth7in \topmargin-.5in
+
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+% You may define a latex command of your own using the \def command.  Anything you type inside the {} will be executed in the text where you use the \contradiction command.  Below are a few other commands that I have defined.
+
+\begin{document}
+
+\title{Complex Analysis in Quantum Mechanics \\
+Math 646 -- Final Project}
+\author{Jonah Berggren, Thomas Gartman, Quinn Meier, and Kyle Turner}
+\date{November 19, 2018}
+
+\maketitle%This command inserts the title, author and date as defined above.
+
+\begin{abstract}
+Complex Analysis and Quantum Mechanics are two subjects which are seemingly mysterious and frequently misunderstood. I
+\end{abstract}
+
+
+\section{Introduction}%this creates a section title
+
+\begin{equation}
+i\hslash \frac{d}{dt} \ket{\psi(t)} = \Hat{H} \ket{\psi(t)}
+\end{equation}
+
+
+Morbi fusce jlkjlkjlkjlkjlkjlklkllllllllllllrbnbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.
+Augue et massa commodo, fringilla pellentesque, dignissim pellentesque ut convallis purus nec, tellus ante suspendisse mollis. Pharetra neque, iaculis elementum eu tellus, tincidunt aenean in pulvinar in repellendus elit. Ac et vel urna, convallis etiam, vel ad montes lobortis placerat porttitor scelerisque, est in lobortis non, diamlorem dui sodales eget. Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum. Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales.
+
+\section{Method}
+
+Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. Nunc a lacinia adipiscing pharetra, vel ut pharetra convallis nulla tortor sodales. Vitae mauris tincidunt sed vel, congue proin interdum, molestie tristique non, orci rutrum amet ultricies nisl aliquam eget, eget vel suscipit diam. Elit eros. Dolor sapien pellentesque urna, elit at elit nec dolor sapien, pede sit justo, nulla amet. Quisque molestie proin diam orci nunc, justo eros enim erat, at dolores, neque ut ad auctor (see \cite{S} and \cite{H}).
+Augue et massa commodo, fringilla pellentesque, dignissim pellentesque ut convallis purus nec, tellus ante suspendisse mollis. Pharetra neque, iaculis elementum eu tellus, tincidunt aenean in pulvinar in repellendus elit. Ac et vel urna, convallis etiam, vel ad montes lobortis placerat porttitor scelerisque, est in lobortis non, diamlorem dui sodales eget. Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum. Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales.
+
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(16,10)
+\put(4,0){\resizebox{10cm}{11cm}{\includegraphics*{FavoriteRiemann.pdf}}}
+\put(6,1){My Favorite Riemman Surface}
+\end{picture}
+\end{center}
+
+\section{ The Fabrication Process}
+
+Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna, \cite{ES}. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. Nunc a lacinia adipiscing pharetra, vel ut pharetra convallis nulla tortor sodales. Vitae mauris tincidunt sed vel, congue proin interdum, molestie tristique non, orci rutrum amet ultricies nisl aliquam eget, eget vel suscipit diam. Elit eros. Dolor sapien pellentesque urna, elit at elit nec dolor sapien, pede sit justo, nulla amet. Quisque molestie proin diam orci nunc, justo eros enim erat, at dolores, neque ut ad auctor.
+Augue et massa commodo, fringilla pellentesque, dignissim pellentesque ut convallis purus nec, tellus ante suspendisse mollis. Pharetra neque, iaculis elementum eu tellus, tincidunt aenean in pulvinar in repellendus elit. Ac et vel urna, convallis etiam, vel ad montes lobortis placerat porttitor scelerisque, est in lobortis non, diamlorem dui sodales eget. Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum. Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales.
+
+
+Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. Nunc a lacinia adipiscing pharetra, vel ut pharetra convallis nulla tortor sodales. Vitae mauris tincidunt sed vel, congue proin interdum, molestie tristique non, orci rutrum amet ultricies nisl aliquam eget, eget vel suscipit diam. Elit eros. Dolor sapien pellentesque urna, elit at elit nec dolor sapien, pede sit justo, nulla amet. Quisque molestie proin diam orci nunc, justo eros enim erat, at dolores, neque ut ad auctor.
+Augue et massa commodo, fringilla pellentesque, dignissim pellentesque ut convallis purus nec, tellus ante suspendisse mollis. Pharetra neque, iaculis elementum eu tellus, tincidunt aenean in pulvinar in repellendus elit. Ac et vel urna, convallis etiam, vel ad montes lobortis placerat porttitor scelerisque, est in lobortis non, diamlorem dui sodales eget. Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum. Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales.
+
+
+
+
+\section{Conclusions - Future Work}
+
+Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. Nunc a lacinia adipiscing pharetra, vel ut pharetra convallis nulla tortor sodales. Vitae mauris tincidunt sed vel, congue proin interdum, molestie tristique non, orci rutrum amet ultricies nisl aliquam eget, eget vel suscipit diam. Elit eros. Dolor sapien pellentesque urna, elit at elit nec dolor sapien, pede sit justo, nulla amet. Quisque molestie proin diam orci nunc, justo eros enim erat, at dolores, neque ut ad auctor.
+Augue et massa commodo, fringilla pellentesque, dignissim pellentesque ut convallis purus nec, tellus ante suspendisse mollis. Pharetra neque, iaculis elementum eu tellus, tincidunt aenean in pulvinar in repellendus elit. Ac et vel urna, convallis etiam, vel ad montes lobortis placerat porttitor scelerisque, est in lobortis non, diamlorem dui sodales eget. Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum. Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales.
+
+\begin{thebibliography}{9999}
+
+\bibitem{S} John P. Ralston, Understanding Quantum Mechanics, Monte Carlo, 2017.
+\bibitem{ES} B. Eisenberg and R. Sullivan, The fundamental theorem of calculus in two dimensions, American Mathematical Monthly 109 (2002) 806-817. 
+\bibitem{H}  M. Hale, "Ethics in Mathematics Courses," Margie Hale's Home Page, 31 October 2002. 03 March 2003 \url{ <http://www.stetson.edu/~mhale/teach/ethiccrs.htm>}. 
+\end{thebibliography}
+
+\section{Group Members and Contributions}
+\begin{enumerate}
+\item {\em Jonah Berggren} \\
+\underline{Contribution}: Wisi mauris morbi massa, mauris tortor libero magnis eu nam, posuere vestibulum tempor aptent, suspendisse condimentum ullamcorper quisque, maecenas dolores metus leo. Proin ut sed vitae elit scelerisque ante, fringilla interdum.\\
+\item {\em Thomas Gartman} \\
+\underline{Contribution}: Tortor quis eleifend vestibulum at eu ultricies, quis mi morbi vestibulum luctus nulla, nam nascetur nobis lacus augue purus vestibulum, mauris at ad quisque, elementum donec donec enim donec sodales. \\
+\item {\em Quinn Meier} \\
+\underline{Contribution}: Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. \\
+\item {\em Kyle Turner} \\
+\underline{Contribution}: Morbi fusce per sed, enim egestas, faucibus et augue, aenean tempus diam non pede eget. Varius non dictumst aliquam, neque pede velit magna. Vitae dictumst sapien nonummy lorem, eros dis pharetra sapien. \\
+
+\end{enumerate}
+
+
+\section{Appendix}
+
+The commands or code  (Mathematica, Matlab, etc ) that we used to generate the plots.
+
+
+\end{document}
+
