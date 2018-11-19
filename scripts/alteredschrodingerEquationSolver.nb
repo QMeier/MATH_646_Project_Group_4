@@ -1,0 +1,378 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15719,        368]
+NotebookOptionsPosition[     15163,        348]
+NotebookOutlinePosition[     15507,        363]
+CellTagsIndexPosition[     15464,        360]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{"ct", ",", "DensityPlot", ",", "Plot3D"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{"Evaluate", "[", 
+      RowBox[{
+       RowBox[{"Abs", "@", 
+        RowBox[{"u", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{"ct", ",", 
+            RowBox[{"x0", "-", "t"}], ",", "t"}], "]"}], ",", "x"}], "]"}]}], 
+       "/.", 
+       RowBox[{"Quiet", "[", 
+        RowBox[{"NDSolve", "[", 
+         RowBox[{
+          RowBox[{"Evaluate", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"I", "[", " ", 
+                RowBox[{
+                 RowBox[{"1.0546", "e"}], "-", "34"}], "]"}], 
+               RowBox[{"D", "[", 
+                RowBox[{
+                 RowBox[{"u", "[", 
+                  RowBox[{"x", ",", "t"}], "]"}], ",", "t"}], "]"}]}], 
+              "\[Equal]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", 
+                 RowBox[{"[", " ", 
+                  RowBox[{
+                   RowBox[{"1.0546", "e"}], "-", "34"}], "]"}]}], "/", 
+                RowBox[{"[", 
+                 RowBox[{"2", "*", "1"}], "]"}]}], " ", "*", 
+               RowBox[{"[", 
+                RowBox[{
+                 RowBox[{"D", "[", 
+                  RowBox[{
+                   RowBox[{"u", "[", 
+                    RowBox[{"x", ",", "t"}], "]"}], ",", "x", ",", "x"}], 
+                  "]"}], " ", "+", " ", 
+                 RowBox[{"x", "^", "2"}]}], "]"}], 
+               RowBox[{"u", "[", 
+                RowBox[{"x", ",", "t"}], "]"}]}]}], ",", 
+             RowBox[{
+              RowBox[{"u", "[", 
+               RowBox[{"0", ",", "x"}], "]"}], "\[Equal]", "0"}], ",", 
+             RowBox[{
+              RowBox[{"u", "[", 
+               RowBox[{"t", ",", 
+                RowBox[{"-", "x0"}]}], "]"}], "\[Equal]", 
+              RowBox[{"u", "[", 
+               RowBox[{"t", ",", "x0"}], "]"}]}]}], "}"}], "]"}], ",", "u", 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "x0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", 
+            RowBox[{"-", "x0"}], ",", "x0"}], "}"}], ",", 
+          RowBox[{"Method", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<MethodOfLines\>\"", ",", 
+             RowBox[{"\"\<SpatialDiscretization\>\"", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<TensorProductGrid\>\"", ",", 
+                RowBox[{
+                "\"\<DifferenceOrder\>\"", "\[Rule]", 
+                 "\"\<Pseudospectral\>\""}], ",", 
+                RowBox[{"\"\<MinStepSize\>\"", "\[Rule]", "0.2`"}]}], 
+               "}"}]}]}], "}"}]}]}], "]"}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "x0"}], ",", "x0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "mesh"}], ",", 
+     RowBox[{"MeshFunctions", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"#3", "&"}], "}"}]}], ",", 
+     RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "Hue"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "30"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", 
+      RowBox[{"ControlActive", "[", 
+       RowBox[{"1", ",", "2"}], "]"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"475", ",", "325"}], "}"}]}], ",", 
+     RowBox[{"ImagePadding", "\[Rule]", "15"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "1.", ",", "\"\<initial peak separation\>\""}], "}"}],
+      ",", "0", ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x0", ",", "5.", ",", "\"\<solution range\>\""}], "}"}], ",", 
+     "1", ",", "50", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mesh", ",", "Automatic", ",", "\"\<show mesh\>\""}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"False", ",", "Automatic"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "Checkbox"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ct", ",", "True", ",", "\"\<plot type\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"True", "\[Rule]", "\"\<2D\>\""}], ",", 
+       RowBox[{"False", "\[Rule]", "\"\<3D\>\""}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}], ",", 
+   RowBox[{"ControllerLinking", "\[Rule]", "True"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
+   RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.751209852883552*^9, 3.751209852883552*^9}, 
+   3.7512099564801626`*^9, {3.7512100381073937`*^9, 3.7512100417649403`*^9}, {
+   3.7514627151884613`*^9, 
+   3.7514629382742205`*^9}},ExpressionUUID->"6bcb0c9e-d871-41e3-b8cc-\
+17dae1b378dd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 5.08, $CellContext`ct$$ = 
+    False, $CellContext`mesh$$ = False, $CellContext`x0$$ = 18.6, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 1., "initial peak separation"}, 0, 10}, {{
+       Hold[$CellContext`x0$$], 5., "solution range"}, 1, 50}, {{
+       Hold[$CellContext`mesh$$], Automatic, "show mesh"}, {
+      False, Automatic}}, {{
+       Hold[$CellContext`ct$$], True, "plot type"}, {
+      True -> "2D", False -> "3D"}}}, Typeset`size$$ = {475., {159., 166.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$6543$$ = 0, $CellContext`x0$6548$$ = 
+    0, $CellContext`mesh$6549$$ = False, $CellContext`ct$6550$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1., $CellContext`ct$$ = 
+        True, $CellContext`mesh$$ = Automatic, $CellContext`x0$$ = 5.}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$6543$$, 0], 
+        Hold[$CellContext`x0$$, $CellContext`x0$6548$$, 0], 
+        Hold[$CellContext`mesh$$, $CellContext`mesh$6549$$, False], 
+        Hold[$CellContext`ct$$, $CellContext`ct$6550$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      If[$CellContext`ct$$, DensityPlot, Plot3D][
+        Evaluate[
+         ReplaceAll[
+          Abs[
+           $CellContext`u[
+            
+            If[$CellContext`ct$$, $CellContext`x0$$ - $CellContext`t, \
+$CellContext`t], $CellContext`x]], 
+          Quiet[
+           NDSolve[
+            Evaluate[{I D[
+                  $CellContext`u[$CellContext`t, $CellContext`x], \
+$CellContext`t] + D[
+                 $CellContext`u[$CellContext`t, $CellContext`x], \
+$CellContext`x, $CellContext`x] + (2 Abs[
+                    $CellContext`u[$CellContext`t, $CellContext`x]]^2) \
+$CellContext`u[$CellContext`t, $CellContext`x] == 
+              0.1 (1 - Cos[
+                Pi ($CellContext`x/$CellContext`x0$$)]), $CellContext`u[
+               0, $CellContext`x] == 
+              E^(-($CellContext`x - $CellContext`a$$)^2) + 
+               E^(-($CellContext`x + $CellContext`a$$)^2), \
+$CellContext`u[$CellContext`t, -$CellContext`x0$$] == \
+$CellContext`u[$CellContext`t, $CellContext`x0$$]}], $CellContext`u, \
+{$CellContext`t, 
+             0, $CellContext`x0$$}, {$CellContext`x, -$CellContext`x0$$, \
+$CellContext`x0$$}, 
+            Method -> {
+             "MethodOfLines", 
+              "SpatialDiscretization" -> {
+               "TensorProductGrid", "DifferenceOrder" -> "Pseudospectral", 
+                "MinStepSize" -> 
+                0.2}}]]]], {$CellContext`x, -$CellContext`x0$$, \
+$CellContext`x0$$}, {$CellContext`t, 0, 10}, Mesh -> $CellContext`mesh$$, 
+        MeshFunctions -> {#3& }, ColorFunctionScaling -> False, PlotRange -> 
+        Full, ColorFunction -> Hue, PlotPoints -> 30, MaxRecursion -> 
+        ControlActive[1, 2], ImageSize -> {475, 325}, ImagePadding -> 15], 
+      "Specifications" :> {{{$CellContext`a$$, 1., "initial peak separation"},
+          0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`x0$$, 5., "solution range"}, 1, 50, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`mesh$$, Automatic, "show mesh"}, {
+         False, Automatic}, ControlType -> 
+         Checkbox}, {{$CellContext`ct$$, True, "plot type"}, {
+         True -> "2D", False -> "3D"}, ControlType -> SetterBar}}, 
+      "Options" :> {
+       ControllerLinking -> True, ControlPlacement -> Top, 
+        SynchronousInitialization -> False, SynchronousUpdating -> False}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{526., {240., 247.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->False,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{
+  3.7514629613687663`*^9},ExpressionUUID->"34786af7-1ce3-4d37-9032-\
+cbc724581f03"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 4.34, $CellContext`ct$$ = 
+    False, $CellContext`mesh$$ = False, $CellContext`x0$$ = 
+    11.600000000000001`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 4.34, "initial peak separation"}, 0, 10}, {{
+       Hold[$CellContext`x0$$], 11.600000000000001`, "solution range"}, 1, 
+      50}, {{
+       Hold[$CellContext`mesh$$], False, "show mesh"}, {False, Automatic}}, {{
+       Hold[$CellContext`ct$$], False, "plot type"}, {
+      True -> "2D", False -> "3D"}}}, Typeset`size$$ = {475., {159., 166.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$5809$$ = 0, $CellContext`x0$5810$$ = 
+    0, $CellContext`mesh$5811$$ = False, $CellContext`ct$5812$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 4.34, $CellContext`ct$$ = 
+        False, $CellContext`mesh$$ = False, $CellContext`x0$$ = 
+        11.600000000000001`}, "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$5809$$, 0], 
+        Hold[$CellContext`x0$$, $CellContext`x0$5810$$, 0], 
+        Hold[$CellContext`mesh$$, $CellContext`mesh$5811$$, False], 
+        Hold[$CellContext`ct$$, $CellContext`ct$5812$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      If[$CellContext`ct$$, DensityPlot, Plot3D][
+        Evaluate[
+         ReplaceAll[
+          Abs[
+           $CellContext`u[
+            
+            If[$CellContext`ct$$, $CellContext`x0$$ - $CellContext`t, \
+$CellContext`t], $CellContext`x]], 
+          Quiet[
+           NDSolve[
+            Evaluate[{I D[
+                  $CellContext`u[$CellContext`t, $CellContext`x], \
+$CellContext`t] + D[
+                 $CellContext`u[$CellContext`t, $CellContext`x], \
+$CellContext`x, $CellContext`x] + (2 Abs[
+                    $CellContext`u[$CellContext`t, $CellContext`x]]^2) \
+$CellContext`u[$CellContext`t, $CellContext`x] == 
+              0.1 (1 - Cos[
+                Pi ($CellContext`x/$CellContext`x0$$)]), $CellContext`u[
+               0, $CellContext`x] == 
+              E^(-($CellContext`x - $CellContext`a$$)^2) + 
+               E^(-($CellContext`x + $CellContext`a$$)^2), \
+$CellContext`u[$CellContext`t, -$CellContext`x0$$] == \
+$CellContext`u[$CellContext`t, $CellContext`x0$$]}], $CellContext`u, \
+{$CellContext`t, 
+             0, $CellContext`x0$$}, {$CellContext`x, -$CellContext`x0$$, \
+$CellContext`x0$$}, 
+            Method -> {
+             "MethodOfLines", 
+              "SpatialDiscretization" -> {
+               "TensorProductGrid", "DifferenceOrder" -> "Pseudospectral", 
+                "MinStepSize" -> 
+                0.2}}]]]], {$CellContext`x, -$CellContext`x0$$, \
+$CellContext`x0$$}, {$CellContext`t, 0, 10}, Mesh -> $CellContext`mesh$$, 
+        MeshFunctions -> {#3& }, ColorFunctionScaling -> False, PlotRange -> 
+        Full, ColorFunction -> Hue, PlotPoints -> 30, MaxRecursion -> 
+        ControlActive[1, 2], ImageSize -> {475, 325}, ImagePadding -> 15], 
+      "Specifications" :> {{{$CellContext`a$$, 4.34, 
+          "initial peak separation"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`x0$$, 11.600000000000001`, 
+          "solution range"}, 1, 50, Appearance -> 
+         "Labeled"}, {{$CellContext`mesh$$, False, "show mesh"}, {
+         False, Automatic}, ControlType -> 
+         Checkbox}, {{$CellContext`ct$$, False, "plot type"}, {
+         True -> "2D", False -> "3D"}, ControlType -> SetterBar}}, 
+      "Options" :> {
+       ControllerLinking -> True, ControlPlacement -> Top, 
+        SynchronousInitialization -> False, SynchronousUpdating -> False}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{526., {240., 247.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->False,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7514629667908335`*^9},ExpressionUUID->"7c2f7746-659e-4713-a201-\
+4fa407351997"]
+}, Open  ]]
+},
+WindowSize->{1536, 781},
+WindowMargins->{{-4, Automatic}, {Automatic, -4}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5281, 133, 183, "Input", "ExpressionUUID" -> \
+"6bcb0c9e-d871-41e3-b8cc-17dae1b378dd"],
+Cell[CellGroupData[{
+Cell[5864, 157, 4606, 93, 504, InheritFromParent, "ExpressionUUID" -> \
+"34786af7-1ce3-4d37-9032-cbc724581f03"],
+Cell[10473, 252, 4674, 93, 504, "Output", "ExpressionUUID" -> \
+"7c2f7746-659e-4713-a201-4fa407351997"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
